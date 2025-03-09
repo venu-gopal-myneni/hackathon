@@ -8,6 +8,7 @@ CURRENT_DIR = Path(__file__).parent
 cities = ["New York", "Los Angeles", "Chicago", "Houston", "Miami", "Dallas", "San Francisco", "Seattle", "Boston",
           "Denver"]
 
+
 # Define temperature range (e.g., 15°C to 35°C)
 TEMP_MIN = 15.0
 TEMP_MAX = 35.0
@@ -33,7 +34,9 @@ def generate_csv_files(subfolder, num_chunks, rows_per_chunk):
 
 
 if __name__ == "__main__":
-    subfolder = "sample_data_example_01"
-    num_chunks = 2
+    # 17_000_000 # ~ 256 MB
+    # 68_000_000 # ~ 1 GB
+    subfolder = "sample_data"
+    num_chunks = 4
     rows_per_chunk = 10
     generate_csv_files(subfolder, num_chunks, rows_per_chunk)
