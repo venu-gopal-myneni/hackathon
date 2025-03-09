@@ -5,7 +5,7 @@
 
 ### Problem statement brief
 
-Create a Python script using only standard library modules to process multiple larger-than-memory CSV files in a folder.
+Create a Python script using only standard library modules to process multiple larger-than-memory CSV files in a given folder.
 
 ---
 
@@ -13,9 +13,10 @@ Create a Python script using only standard library modules to process multiple l
 
 - Folder can contain any number of csv files. Their size can range from 1 MB to 8 GB
 - Each file includes a **header** row.
-- Columns Details:
+- Column data details:
     - **city** (`str`): Length 4-20 characters
     - **temperature** (`float`): Ranges from **-20.00 to 60.00**
+- Input file example
 ```
 city,temperature
 New York,23.62
@@ -33,14 +34,15 @@ Houston,27.49
 
 - Create a **single file** named `main.py` containing a function named process.
 - `process` function should :
-    - Take in **one argument**: the path to a folder where CSV files are stored.
-    - Returns a **dictionary** with keys as cities names and dictionaries as values with **four metrics**: `count`, `avg`, `max`, and `min` of temperature column calculated for **all_cities**
-      and for each **city**.
+    - Take in **one argument** : the path to a folder where CSV files are stored.
+    - Returns a single dictionary with keys as city names and values as dictionaries with four metrics: `count`, `avg`, `max`, and `min` of temperature column calculated for **all_cities**
+      and for each **city** .
     - ```def process(folder_path: str) -> dict[str,dict]```
+- Refer the code in this repo for an end to end example
 
 ---
 
-### **Example Output Dictionary**
+### **Example output dictionary**
 
 ```python
 {
@@ -61,12 +63,10 @@ Houston,27.49
 ### **Conditions**
 - Only Python standard library modules are allowed. No external packages should be used.
 - Allowed Python Versions: **>= Python 3.10, <= Python 3.12**
-
+- Max allowed run time 15 minutes
 ---
 
-
-
-### Evaluation Criteria
+### Test Bed
 
 Your code will be tested on an **AWS EC2 Instance** with the following specifications:
 
@@ -80,5 +80,9 @@ Your code will be tested on an **AWS EC2 Instance** with the following specifica
     - **4 GiB**
     - **8 GiB**
 
-Ensure your solution is efficient and optimized for handling large CSV files in a memory-efficient way.
+---
+
+### Evaluation Criterion
+
+- to be determined ...
 
